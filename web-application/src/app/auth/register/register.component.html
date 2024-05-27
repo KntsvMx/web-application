@@ -1,0 +1,30 @@
+<div class="register-section mt-5 mx-auto w-50">
+  <main class="form-register w-100 m-auto">
+    <form [formGroup]="registerForm" (ngSubmit)="register()" >
+      <h1 class="h3 mb-3 fw-normal">Please register new account</h1>
+
+      <div class="form-floating">
+        <input [formControlName]="'name'" type="text" class="form-control" id="floatingName" placeholder="name">
+        <label for="floatingName">Name</label>
+      </div>
+      <div class="form-floating">
+        <input [formControlName]="'surname'" type="text" class="form-control" id="floatingSurname" placeholder="surname">
+        <label for="floatingSurname">Surname</label>
+      </div>
+      <div class="form-floating">
+        <input [formControlName]="'username'" type="text" class="form-control" id="floatingUserName" placeholder="Username">
+        <label for="floatingSurname">Username</label>
+      </div>
+      <div class="form-floating">
+        <input [formControlName]="'email'" type="email" class="form-control" id="floatingEmail" placeholder="email">
+        <label for="floatingEmail">Email</label>
+      </div>
+      <div class="form-floating">
+        <input [formControlName]="'password'" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <button class="btn btn-primary w-100 py-2 mt-2 mb-2" type="submit">Sign in</button>
+      <button class="btn btn-primary w-100 py-2" (click)="login()">Back to Login</button>
+    </form>
+  </main>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Java Quizzes</h2>
+  <div *ngIf="currentQuestionIndex < questions.length; else quizComplete">
+    <div class="question">
+      <h3>{{ questions[currentQuestionIndex].question }}</h3>
+      <ul>
+        <li *ngFor="let option of questions[currentQuestionIndex].options">
+          <label>
+            <input type="radio" name="option" (change)="selectOption(option)">
+            {{ option }}
+          </label>
+        </li>
+      </ul>
+      <button (click)="nextQuestion()" [disabled]="!selectedOption">Next</button>
+    </div>
+  </div>
+  <ng-template #quizComplete>
+    <div class="result">
+      <h3>Quiz Complete!</h3>
+      <p>Your score: {{ score }}/{{ questions.length }}</p>
+      <button (click)="restartQuiz()">Restart Quiz</button>
+    </div>
+  </ng-template>
+</div>

@@ -1,126 +1,166 @@
-/* Общие стили для всего приложения */
+*,:before,:after {
+  box-sizing: border-box
+}
+
+html {
+  font-family: system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -webkit-font-smoothing: antialiased
+}
+
 body {
-  font-family: "Times New Roman", sans-serif;
-  color: #333;
-  background-color: #f5f5f5;
+  margin: 0
 }
 
-/* Стили для заголовков */
-h1, h2, h3, h4, h5, h6 {
-  color: #444;
+hr {
+  height: 0;
+  color: inherit
 }
 
-/* Стили для ссылок */
-a {
-  color: #007bff;
-  text-decoration: none;
+abbr[title] {
+  text-decoration: underline dotted
 }
 
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+b,strong {
+  font-weight: bolder
 }
 
-/* Стили для кнопок */
-.btn {
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+code,kbd,samp,pre {
+  font-family: ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 1em
 }
 
-.btn:hover {
-  background-color: #0056b3;
+small {
+  font-size: 80%
 }
 
-/* Стили для форм */
-.form-control {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Стили для навигационной панели */
-.navbar {
-  background-color: #007bff;
-}
-
-.navbar .nav-link {
-  color: #fff;
-}
-
-.navbar .nav-link:hover {
-  color: #ccc;
-}
-
-/* Стили для футера */
-.footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  color: #6c757d;
-}
-
-.b-example-divider {
-  width: 100%;
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-}
-
-.bi {
-  vertical-align: -.125em;
-  fill: currentColor;
-}
-
-.nav-scroller {
+sub,sup {
+  font-size: 75%;
+  line-height: 0;
   position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
+  vertical-align: baseline
 }
 
-.nav-scroller .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+sub {
+  bottom: -.25em
 }
 
-.btn-bd-primary {
-  --bd-violet-bg: #712cf9;
-  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-  --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: var(--bd-violet-bg);
-  --bs-btn-border-color: var(--bd-violet-bg);
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: #6528e0;
-  --bs-btn-hover-border-color: #6528e0;
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #5a23c8;
-  --bs-btn-active-border-color: #5a23c8;
+sup {
+  top: -.5em
 }
 
-.bd-mode-toggle {
-  z-index: 1500;
+table {
+  text-indent: 0;
+  border-color: inherit
 }
 
-.bd-mode-toggle .dropdown-menu .active .bi {
-  display: block !important;
+button,input,optgroup,select,textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
 }
+
+button,select {
+  text-transform: none
+}
+
+button,[type=button],[type=reset],[type=submit] {
+  -webkit-appearance: button;
+  border: none;
+  background: transparent
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText
+}
+
+:-moz-ui-invalid {
+  box-shadow: none
+}
+
+legend {
+  padding: 0
+}
+
+progress {
+  vertical-align: baseline
+}
+
+::-webkit-inner-spin-button,::-webkit-outer-spin-button {
+  height: auto
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+}
+
+summary {
+  display: list-item
+}
+
+a {
+  text-decoration: none
+}
+
+a,a:active,a:hover,a:visited {
+  color: currentColor;
+  outline: 0
+}
+
+:root {
+  --color-error: #e90000;
+  --color-off-white: #f0f1fa;
+  --color-white: #fff;
+  --color-dark-white: #e4e6ef;
+  --color-off-white-semi: rgba(240, 241, 250, .7);
+  --color-black: #000000;
+  --color-green: #c1ff00;
+  --color-blue: #1a2ffb;
+  --color-red: #ff4c41;
+  --color-grey-blue: #2b2e3a;
+  --color-dark-blue: #071bdf;
+  --color-purple: #8832f7;
+  --color-project-details-logo-color: #f0f;
+  --grid-space: calc((100% - 11 * var(--grid-gap)) / 12);
+  --grid-gap: 2vw;
+  --global-border-radius: 20px;
+  --base-padding-x: max(5vw, 40px);
+  --base-padding-y: clamp(30px, 4vw, 50px);
+  --header-color: #0016ec;
+  --header-text-color: #000000;
+  --project-details-bg: #000;
+  --project-details-highlight: #000;
+  --project-details-btn-bg: #000;
+  --project-details-btn-text: #000;
+  --project-details-icon-bg: #000;
+  --project-details-icon-color: #000;
+  --project-details-text: #000;
+  --project-details-btn-bg-hover: #000;
+  --project-details-btn-text-hover: #fff;
+  --header-size: clamp(1rem, 1vw, 2rem);
+  --cross-size: clamp(.875rem, 1vw, 2rem)
+}
+
+
+
+
+

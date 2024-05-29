@@ -1,3 +1,70 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  z-index: 52;
+  width: 100%;
+  color: var(--color-black);
+  padding: var(--base-padding-y) var(--base-padding-x);
+  font-size: clamp(1rem, 1vw, 2rem);
+  transition: color .25s;
+  pointer-events: auto;
+  position: relative; /* Добавлено для относительного позиционирования дочерних элементов */
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+.nav-logo, .header-center-text, .navbar-collapse {
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.header-center-text {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translateX(-50%); /* Сдвиг на 50% влево */
+  text-align: center;
+}
+
+.nav-logo {
+  order: 1; /* Логотип слева */
+}
+
+.navbar-collapse {
+  order: 3; /* Ссылки справа */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-brand {
+  transition: color .5s;
+  color: var(--header-text-color);
+  z-index: 1;
+}
+
 .nav-link {
-  color: white !important;
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--color-off-white-semi);
+  color: var(--color-black);
+  border-radius: var(--global-border-radius);
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.nav-link:hover {
+  background-color: var(--color-off-white);
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
 }
